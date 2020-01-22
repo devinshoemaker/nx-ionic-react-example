@@ -11,6 +11,12 @@ function getCustomWebpackConfig(webpackConfig) {
   // babelRuleOptions.plugins.push('@babel/plugin-proposal-optional-chaining');
   // babelRuleOptions.plugins.push('@babel/plugin-proposal-nullish-coalescing-operator');
 
+  // Polyfill Node
+  config.node = {
+    global: true,
+    process: true
+  };
+
   return config;
 }
 
