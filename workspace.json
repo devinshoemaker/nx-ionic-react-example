@@ -1,8 +1,117 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "starters-blank": {
+      "root": "apps/starters/blank",
+      "sourceRoot": "apps/starters/blank/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/web:build",
+          "options": {
+            "outputPath": "dist/apps/starters/blank",
+            "index": "apps/starters/blank/src/index.html",
+            "main": "apps/starters/blank/src/main.tsx",
+            "polyfills": "apps/starters/blank/src/polyfills.ts",
+            "tsConfig": "apps/starters/blank/tsconfig.app.json",
+            "assets": [
+              "apps/starters/blank/src/favicon.ico",
+              "apps/starters/blank/src/assets"
+            ],
+            "styles": ["apps/starters/blank/src/styles.css"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/starters/blank/src/environments/environment.ts",
+                  "with": "apps/starters/blank/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "starters-blank:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "starters-blank:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/starters/blank/.eslintrc",
+            "tsConfig": [
+              "apps/starters/blank/tsconfig.app.json",
+              "apps/starters/blank/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/starters/blank/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/starters/blank/jest.config.js",
+            "tsConfig": "apps/starters/blank/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "starters-blank-e2e": {
+      "root": "apps/starters/blank-e2e",
+      "sourceRoot": "apps/starters/blank-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/starters/blank-e2e/cypress.json",
+            "tsConfig": "apps/starters/blank-e2e/tsconfig.e2e.json",
+            "devServerTarget": "starters-blank:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "starters-blank:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/starters/blank-e2e/.eslintrc",
+            "tsConfig": ["apps/starters/blank-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/starters/blank-e2e/**"]
+          }
+        }
+      }
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/react"
   },
   "schematics": {
     "@nrwl/workspace": {
@@ -17,9 +126,15 @@
     },
     "@nrwl/react": {
       "application": {
-        "linter": "eslint"
+        "style": "css",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "css"
       },
       "library": {
+        "style": "css",
         "linter": "eslint"
       }
     },
@@ -48,5 +163,6 @@
         "linter": "eslint"
       }
     }
-  }
+  },
+  "defaultProject": "starters-blank"
 }
