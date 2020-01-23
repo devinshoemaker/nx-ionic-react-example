@@ -23,6 +23,6 @@ describe('App', () => {
       </BrowserRouter>
     );
 
-    expect(getByText('Welcome to starters-blank!')).toBeTruthy();
+    expect(getByText('Welcome to blank!')).toBeTruthy();
   });
 });
