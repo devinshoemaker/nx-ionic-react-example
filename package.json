@@ -26,6 +26,7 @@
   },
   "private": true,
   "dependencies": {
+    "@capacitor/core": "^1.4.0",
     "@ionic/react": "^4.11.8",
     "@ionic/react-router": "^4.11.8",
     "document-register-element": "1.13.1",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "7.7.4",
+    "@capacitor/cli": "^1.4.0",
     "@nrwl/cypress": "8.11.2",
     "@nrwl/eslint-plugin-nx": "8.11.2",
     "@nrwl/jest": "8.11.2",
