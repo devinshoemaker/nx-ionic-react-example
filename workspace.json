@@ -16,7 +16,7 @@
             "polyfills": "apps/starters/blank/src/polyfills.ts",
             "tsConfig": "apps/starters/blank/tsconfig.app.json",
             "assets": [
-              "apps/starters/blank/src/favicon.ico",
+              "apps/starters/blank/src/favicon.png",
               "apps/starters/blank/src/assets"
             ],
             "styles": ["apps/starters/blank/src/styles.css"],
