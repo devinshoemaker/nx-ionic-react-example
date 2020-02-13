@@ -19,7 +19,9 @@
               "apps/starters/blank/src/favicon.png",
               "apps/starters/blank/src/assets"
             ],
-            "styles": ["apps/starters/blank/src/styles.css"],
+            "styles": [
+              "apps/starters/blank/src/styles.css"
+            ],
             "scripts": [],
             "webpackConfig": "./apps/webpack.config.js"
           },
@@ -68,7 +70,10 @@
               "apps/starters/blank/tsconfig.app.json",
               "apps/starters/blank/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/starters/blank/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/starters/blank/**"
+            ]
           }
         },
         "test": {
@@ -103,8 +108,13 @@
           "options": {
             "linter": "eslint",
             "config": "apps/starters/blank-e2e/.eslintrc",
-            "tsConfig": ["apps/starters/blank-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/starters/blank-e2e/**"]
+            "tsConfig": [
+              "apps/starters/blank-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/starters/blank-e2e/**"
+            ]
           }
         }
       }
