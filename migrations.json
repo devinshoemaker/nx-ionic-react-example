@@ -1,0 +1,67 @@
+{
+  "migrations": [
+    {
+      "version": "8.12.0-beta.1",
+      "description": "Add implicit e2e dependencies",
+      "factory": "./src/migrations/update-8-12-0/add-implicit-e2e-deps",
+      "package": "@nrwl/workspace",
+      "name": "add-implicit-e2e-deps"
+    },
+    {
+      "version": "8.12.0-beta.1",
+      "description": "Update package.json dependencies",
+      "factory": "./src/migrations/update-8-12-0/update-package-json-deps",
+      "package": "@nrwl/workspace",
+      "name": "update-package-json-deps"
+    },
+    {
+      "version": "8.12.0-beta.1",
+      "description": "Add enforceBuildableLibDependency flag to the nx enforce boundary lint rule",
+      "factory": "./src/migrations/update-8-12-0/update-enforce-boundary-lint-rule",
+      "package": "@nrwl/workspace",
+      "name": "update-enforce-boundary-lint-rule"
+    },
+    {
+      "version": "9.0.0-beta.1",
+      "description": "Update typescript to 3.6 and angular/cli to version 9",
+      "factory": "./src/migrations/update-9-0-0/update-9-0-0",
+      "package": "@nrwl/workspace",
+      "name": "update-9-0-0"
+    },
+    {
+      "version": "8.12.0-beta.1",
+      "description": "Update Cypress to ^3.8.2",
+      "factory": "./src/migrations/update-8-12-0/update-8-12-0",
+      "package": "@nrwl/cypress",
+      "name": "update-8.12.0"
+    },
+    {
+      "version": "9.0.0-beta.1",
+      "description": "Upgrades jest-preset-angular to 8.0.0",
+      "factory": "./src/migrations/update-9-0-0/update-9-0-0",
+      "package": "@nrwl/jest",
+      "name": "update-9.0.0"
+    },
+    {
+      "version": "8.12.0-beta.1",
+      "description": "Update styled-components",
+      "factory": "./src/migrations/update-8-12-0/update-8-12-0",
+      "package": "@nrwl/react",
+      "name": "update-8.12.0"
+    },
+    {
+      "version": "8.12.0-beta.1",
+      "description": "Ensure React correct webpack config and babel preset",
+      "factory": "./src/migrations/update-8-12-0/fix-react-files-8-12-0",
+      "package": "@nrwl/react",
+      "name": "fix-react-files-8.12.0"
+    },
+    {
+      "version": "9.0.0-beta.1",
+      "description": "Rename @nrwl/web:bundle => @nrwl/web:package",
+      "factory": "./src/migrations/update-9-0-0/update-builder-9-0-0",
+      "package": "@nrwl/web",
+      "name": "update-builder-9.0.0"
+    }
+  ]
+}
